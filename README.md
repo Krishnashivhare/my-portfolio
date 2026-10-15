@@ -1,36 +1,133 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Krishna Shivhare — Personal Portfolio Website
 
-## Getting Started
+A personal portfolio website for **Krishna Shivhare**, Computer Science Engineering undergraduate at **Symbiosis Institute of Technology, Nagpur** (Class of 2028).
 
-First, run the development server:
+Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🌟 Key Highlights & Design Direction
+
+- **Theme & Aesthetics:** Dark, minimal, futuristic, and premium. Matte black (`#0A0A0A`), charcoal panels (`#121212`), crisp white typography, and dual accents: **Electric Lime** (`#CCFF00`) and **Cyber Violet** (`#A855F7`).
+- **Interactive Background:** High-performance HTML5 Canvas with interactive particle constellation and geometric grid reacting to cursor movements.
+- **Accent Theme Switcher:** One-click instant accent switch between *Electric Lime* and *Cyber Violet* with persistent `localStorage` synchronization.
+- **Flagship Projects with Interactive Simulators:**
+  1. **Blockchain-Based Academic Credential Verification Engine:** Includes a live in-browser SHA-256 cryptographic hash generator using the browser's native Web Crypto API, demonstrating block hashing and tamper detection in real-time.
+  2. **Dynamic Client-Side Application Suite:** Features live interactive countdown timers, regex-driven real-time event form validation, and `localStorage` preference inspectors.
+- **Authentic Engineering Profile:** Strictly honest credentials and activities with no fabricated skill ratings or percentages.
+- **Working Resume:**
+  - Direct download of generated `Krishna_Shivhare_Resume.pdf`
+  - Interactive in-browser resume preview modal with print support
+  - Dedicated `/resume` route for clean printing and viewing
+- **Client-Side Form Validation:** Real-time form checking with friendly demo mode disclosure and a direct 1-click fallback to launch the user's default email client (`mailto:`).
+
+---
+
+## 📂 Project Structure
+
+```text
+portfolio/
+├── public/
+│   ├── Krishna_Shivhare_Resume.pdf  # Generated printable CV
+│   ├── favicon.svg                  # Custom KS monogram favicon
+│   └── ...
+├── src/
+│   ├── app/
+│   │   ├── globals.css              # Custom properties, dark theme & glow utilities
+│   │   ├── layout.tsx               # Google Fonts (Space Grotesk & Inter) + SEO Metadata
+│   │   ├── page.tsx                 # Main portfolio page integrating all sections
+│   │   └── resume/
+│   │       └── page.tsx             # Dedicated printable resume view
+│   ├── components/
+│   │   ├── Navbar.tsx               # Sticky header, scrollspy, accent switcher, mobile drawer
+│   │   ├── Hero.tsx                 # Bold typography, action buttons, specs ribbon
+│   │   ├── HeroCanvas.tsx           # Interactive particle constellation canvas
+│   │   ├── About.tsx                # Split bio, SIT Nagpur highlights, interactive terminal
+│   │   ├── Skills.tsx               # Categorized skills, live search filter, verified badges
+│   │   ├── Projects.tsx             # Featured projects + live SHA-256 blockchain verifier demo
+│   │   ├── Education.tsx            # SIT Nagpur academic timeline & coursework chips
+│   │   ├── BeyondCode.tsx           # Hackathons, problem-solving, collaboration activities
+│   │   ├── Contact.tsx              # Contact info, copy-to-clipboard, validated demo form
+│   │   ├── Footer.tsx               # Copyright, back-to-top control, quick links
+│   │   ├── Icons.tsx                # Crisp custom SVG icons (Github, Linkedin)
+│   │   └── ResumeModal.tsx          # Full-screen modal resume preview
+│   └── data/
+│       └── portfolioData.ts         # Centralized configuration file for all portfolio data
+├── scripts/
+│   └── generate_resume.js           # PDF resume generator script
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Prerequisites
+- **Node.js**: v18.18+ or v20+ / v22+
+- **npm** (or yarn / pnpm)
 
-## Learn More
+### 2. Run the Development Server
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Build for Production
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ☁️ Deploying to Vercel (Free Deployment)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Option A: Via GitHub (Recommended)
+1. Push this repository to your GitHub account:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit: Krishna Shivhare Portfolio"
+   git branch -M main
+   git remote add origin https://github.com/<your-username>/portfolio.git
+   git push -u origin main
+   ```
+2. Go to [https://vercel.com/new](https://vercel.com/new).
+3. Import your `portfolio` repository.
+4. Framework preset will automatically detect **Next.js**.
+5. Click **Deploy**. Your site will be live on a free `*.vercel.app` domain with automated SSL!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Option B: Via Vercel CLI
+```bash
+npx vercel
+```
+Follow the interactive prompts to deploy directly from your terminal.
+
+---
+
+## ⚙️ Customizing Information
+
+All personal details, URLs, and projects are centralized in [`src/data/portfolioData.ts`](./src/data/portfolioData.ts).
+
+To update GitHub, LinkedIn, or Email:
+```typescript
+// src/data/portfolioData.ts
+export const PORTFOLIO_DATA = {
+  personal: {
+    email: "your-email@example.com",
+    github: "https://github.com/your-username",
+    linkedin: "https://linkedin.com/in/your-username",
+    // ...
+  }
+}
+```
+
+To regenerate the PDF resume after making changes:
+```bash
+node scripts/generate_resume.js
+```
+
+---
+
+Designed & Built for **Krishna Shivhare** © 2026.
