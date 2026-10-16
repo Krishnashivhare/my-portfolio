@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <g stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(96, 42)">
+    <polyline points="16 38 4 24 16 10" />
+    <polyline points="32 10 44 24 32 38" />
+    <line x1="26" y1="8" x2="22" y2="40" />
+  </g>
+  <text x="120" y="145" text-anchor="middle" fill="#ffffff" font-family="'Epilogue', sans-serif" font-weight="900" font-size="22" letter-spacing="-0.5px">Web Systems</text>
+  <text x="120" y="172" text-anchor="middle" fill="#ffffff" font-family="'Epilogue', sans-serif" font-weight="600" font-size="12" opacity="0.85" letter-spacing="0.2px">HTML5 &amp; CSS3</text>
+</svg>

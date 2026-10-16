@@ -1,29 +1,24 @@
 {
-  "name": "portfolio",
+  "name": "truus",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@types/pdfkit": "^0.17.6",
-    "lucide-react": "^1.57.0",
-    "next": "16.4.1",
-    "pdfkit": "^0.20.2",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "caniuse-lite": "^1.0.30001816",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.14",
+    "next": "15.2.8",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@tailwindcss/turbopack": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.4.1",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "typescript": "6.0.3"
   }
 }

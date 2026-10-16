@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <rect x="96" y="42" width="48" height="48" rx="8" fill="#ffffff" />
+  <text x="120" y="76" text-anchor="middle" fill="#111111" font-family="'Epilogue', sans-serif" font-weight="900" font-size="26">JS</text>
+  <text x="120" y="145" text-anchor="middle" fill="#ffffff" font-family="'Epilogue', sans-serif" font-weight="900" font-size="22" letter-spacing="-0.5px">JavaScript</text>
+  <text x="120" y="172" text-anchor="middle" fill="#ffffff" font-family="'Epilogue', sans-serif" font-weight="600" font-size="12" opacity="0.85" letter-spacing="0.2px">ES6+ &amp; DOM Systems</text>
+</svg>

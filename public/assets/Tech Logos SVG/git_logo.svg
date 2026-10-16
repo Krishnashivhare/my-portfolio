@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <g stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(97, 42)">
+    <circle cx="10" cy="12" r="5" fill="#ffffff" />
+    <circle cx="10" cy="40" r="5" fill="#ffffff" />
+    <circle cx="36" cy="22" r="5" fill="#ffffff" />
+    <line x1="10" y1="17" x2="10" y2="35" />
+    <path d="M10 28 C 10 22, 24 22, 31 22" fill="none" />
+  </g>
+  <text x="120" y="145" text-anchor="middle" fill="#ffffff" font-family="'Epilogue', sans-serif" font-weight="900" font-size="22" letter-spacing="-0.5px">Git &amp; GitHub</text>
+  <text x="120" y="172" text-anchor="middle" fill="#ffffff" font-family="'Epilogue', sans-serif" font-weight="600" font-size="12" opacity="0.85" letter-spacing="0.2px">Version Control</text>
+</svg>

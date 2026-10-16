@@ -1,160 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --background: #05070c;
-  --foreground: #f8fafc;
-  --muted-text: #94a3b8;
-  --card-bg: rgba(13, 18, 30, 0.7);
-  --card-border: rgba(255, 255, 255, 0.08);
-  --accent-blue: #38bdf8;
-  --accent-violet: #818cf8;
-  --accent-purple: #c084fc;
-  --accent-magenta: #f43f5e;
-  --accent-glow: rgba(56, 189, 248, 0.2);
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
-* {
-  box-sizing: border-box;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
-html {
-  scroll-behavior: smooth;
-  color-scheme: dark;
-  background-color: #05070c;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
 body {
-  background-color: #05070c;
+  background: var(--background);
   color: var(--foreground);
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 7px;
-}
-::-webkit-scrollbar-track {
-  background: #05070c;
-}
-::-webkit-scrollbar-thumb {
-  background: #1e293b;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #334155;
-}
-
-/* Custom text selection */
-::selection {
-  background-color: #6366f1;
-  color: #ffffff;
-}
-
-/* Subtle background grid pattern */
-.bg-grid-cyber {
-  background-size: 48px 48px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-}
-
-/* Glassmorphism utilities */
-.glass-cyber {
-  background: rgba(13, 18, 30, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.glass-cyber-hover {
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.glass-cyber-hover:hover {
-  border-color: rgba(99, 102, 241, 0.35);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px -10px rgba(99, 102, 241, 0.25);
-}
-
-/* Glowing text gradients */
-.gradient-text-hero {
-  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-text-shivhare {
-  background: linear-gradient(135deg, #60a5fa 0%, #a855f7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-text-subtle {
-  background: linear-gradient(135deg, #ffffff 40%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Orbital rotation animation */
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin-slow {
-  animation: spin-slow 24s linear infinite;
-}
-
-@keyframes spin-reverse-slow {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-.animate-spin-reverse-slow {
-  animation: spin-reverse-slow 30s linear infinite;
-}
-
-/* Pulsing radar */
-@keyframes pulse-glow {
-  0%, 100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.04);
-  }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 4s ease-in-out infinite;
-}
-
-/* Handwritten annotation font styling */
-.font-handwriting {
-  font-family: 'Caveat', 'Comic Sans MS', cursive;
-  letter-spacing: 0.05em;
-}
-
-/* Print styles for Resume */
-@media print {
-  body {
-    background: #ffffff !important;
-    color: #000000 !important;
-  }
-  .no-print {
-    display: none !important;
-  }
-  .print-only {
-    display: block !important;
-  }
+  font-family: Arial, Helvetica, sans-serif;
 }

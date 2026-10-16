@@ -7,7 +7,7 @@ const doc = new PDFDocument({
   margins: { top: 40, bottom: 40, left: 45, right: 45 }
 });
 
-const outputPath = path.join(__dirname, '..', 'public', 'Krishna_Shivhare_Resume.pdf');
+const outputPath = path.join(__dirname, '..', 'public', 'Krishna_Shivhare_Resume_Updated.pdf');
 const stream = fs.createWriteStream(outputPath);
 doc.pipe(stream);
 
@@ -19,7 +19,7 @@ const MUTED = '#64748b';
 const LINE = '#e2e8f0';
 
 // Header
-doc.font('Helvetica-Bold').fontSize(24).fillColor(PRIMARY).text('KRISHNA SHIVHARE', { characterSpacing: 1 });
+doc.font('Helvetica-Bold').fontSize(24).fillColor(PRIMARY).text('Krishna :)SHIVHARE', { characterSpacing: 1 });
 doc.font('Helvetica').fontSize(11).fillColor(ACCENT).text('Computer Science Engineer | Full-Stack Developer | Blockchain Enthusiast', { lineGap: 3 });
 doc.fontSize(9).fillColor(MUTED).text('Symbiosis Institute of Technology, Nagpur | Class of 2028 | krishnashivhare.dev@gmail.com | github.com/krishnashivhare | linkedin.com/in/krishnashivhare', { lineGap: 12 });
 
@@ -88,5 +88,5 @@ doc.font('Helvetica').fontSize(8.5).fillColor(SECONDARY).list([
 doc.end();
 
 stream.on('finish', () => {
-  console.log('Successfully generated Krishna_Shivhare_Resume.pdf at', outputPath);
+  console.log('Successfully generated Krishna_Shivhare_Resume_Updated.pdf at', outputPath);
 });
